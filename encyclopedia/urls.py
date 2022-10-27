@@ -1,0 +1,15 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index"),
+    path("wiki/<str:name>", views.entry, name="entry"),
+    path("search", views.search, name="search"),
+    path("newPage", views.newPage, name="newPage"),
+    path("randomEntry", views.randomEntry, name="random"),
+    path("wiki/<str:name>/edit", views.editEntry, name="edit")
+
+
+
+]
